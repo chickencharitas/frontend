@@ -92,7 +92,7 @@ export default function FontManager() {
     setLoading(true);
     try {
       const response = await fetch(
-        `https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyC4J0j8e0KJjKJmKBQ9k6pO6IxVQq_7z_4&sort=popularity`
+        `https://www.googleapis.com/webfonts/v1/webfonts?key=&sort=popularity`
       );
       const data = await response.json();
       let fonts = data.items || [];
@@ -490,3 +490,4 @@ export default function FontManager() {
     </Box>
   );
 }
+
