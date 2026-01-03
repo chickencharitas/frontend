@@ -21,7 +21,7 @@ const installBibleVersion = async (code) => {
  * Returns mock Bible verses for testing
  */
 
-const API_BASE = 'http://localhost:5000/api'; // Backend API (unused in mock mode)
+const API_BASE = process.env.REACT_APP_API_URL || 'http://localhost:5000/api'; // Backend API (unused in mock mode)
 const GETBIBLE_API = 'https://api.getbible.com/v1';
 const CORS_PROXY = 'https://api.allorigins.win/raw?url='; // CORS proxy for external API
 
