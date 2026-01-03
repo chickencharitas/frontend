@@ -92,7 +92,7 @@ export default function FontManager() {
     setLoading(true);
     try {
       const response = await fetch(
-        `https://www.googleapis.com/webfonts/v1/webfonts?key=&sort=popularity`
+        `https://www.googleapis.com/webfonts/v1/webfonts?key=${process.env.REACT_APP_GOOGLE_FONTS_API_KEY}&sort=popularity`
       );
       const data = await response.json();
       let fonts = data.items || [];
@@ -490,4 +490,3 @@ export default function FontManager() {
     </Box>
   );
 }
-
